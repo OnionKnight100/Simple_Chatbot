@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aqua;
+}
+
+#chat-header {
+  background-color: blanchedalmond;
+  width: 400px;
+  height: 50px;
+  border-radius: 20px 20px 0 0;
+  
+  display: flex;
+  align-items: center; /*vertical alignment*/
+  justify-content: center; /*horizontal alignment*/
+  font-weight: bold;
+  font-size: 22px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#chat-box {
+    background-color: blue;
+    width: 400px;
+    height: 500px;
+    border-radius: 0;;
+    padding: 10px;
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+#input-area {
+    background-color: blanchedalmond;
+    width: 400px;
+    height: 80px;
+    border-radius: 0 0 20px 20px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+}
+
+#user-input {
+    width: 300px;;
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 15px;
+}
+
+#send-btn {
+    border: none;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.message {
+    width: 70%;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 13px; /*adjust gap between two text here*/
+    word-wrap: break-word;
+}
+
+.user {
+    background-color: green;
+    border-radius: 10px 0 10px 10px;
+    margin-left: auto;
+}
+
+.bot {
+    background-color: greenyellow;
+    border-radius: 0 10px 10px 10px;
+    margin-right: auto;
+}
