@@ -2,6 +2,34 @@ const chatBox = document.getElementById("chat-box");
 const sendBtn = document.getElementById("send-btn");
 const userInput = document.getElementById("user-input");
 
+const infoSlides = document.querySelectorAll(".info-content");
+const prevBtn = document.getElementById("prev-btn");
+const nextBtn = document.getElementById("next-btn");
+
+console.log(infoSlides);
+
+let currentSlide = 0;
+infoSlides[currentSlide].classList.add("active");
+
+// navigation buttons
+nextBtn.addEventListener("click", () => {
+    infoSlides[currentSlide].classList.remove("active");
+    currentSlide++;
+    if(currentSlide >= infoSlides.length){
+        currentSlide = 0;        
+    }
+    infoSlides[currentSlide].classList.add("active");
+});
+prevBtn.addEventListener("click", () => {
+    infoSlides[currentSlide].classList.remove("active");
+    currentSlide--;
+    if(currentSlide < 0){
+        currentSlide = infoSlides.length - 1; 
+        // console.log(currentSlide);
+    }
+    infoSlides[currentSlide].classList.add("active");
+});
+
 
 sendBtn.addEventListener("click", function(){
     console.log(userInput.value);
